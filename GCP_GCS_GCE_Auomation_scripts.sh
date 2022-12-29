@@ -40,7 +40,7 @@ stress -c 8 -t 120
 #
 
 # Metadata should be set in the "lab-logs-bucket" attribute using the "gs://mybucketname/" format.
-log_bucket_metadata_name=playground-s-11-b7bfc3a2-lab-logs-bucket
+log_bucket_metadata_name=lab-logs-bucket
 log_bucket_metadata_url="http://metadata.google.internal/computeMetadata/v1/instance/attributes/${log_bucket_metadata_name}"
 worker_log_bucket=$(curl -H "Metadata-Flavor: Google" "${log_bucket_metadata_url}")
 
